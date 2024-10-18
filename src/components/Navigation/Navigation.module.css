@@ -1,0 +1,98 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  color: #fff;
+}
+
+.activeLink {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.menuDesktop {
+  display: none;
+}
+
+.button {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button:hover,
+.button:active {
+  color: #fff;
+}
+
+.menuModal {
+  position: fixed;
+  top: 0;
+  left: -340px;
+  width: 340px;
+  height: 100vh;
+  background-color: #1f1f24;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.5);
+  padding: 64px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: left 0.5s ease;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  padding: 12px;
+  cursor: pointer;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.closeButton:hover {
+  color: #fff;
+}
+
+.open {
+  left: 0;
+}
+
+@media (min-width: 992px) {
+  .menuDesktop {
+    display: flex;
+    gap: 32px;
+  }
+
+  .button {
+    display: none;
+  }
+
+  .menuModal {
+    display: none;
+  }
+}

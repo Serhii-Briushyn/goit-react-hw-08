@@ -1,0 +1,80 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 20px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.select {
+  position: absolute;
+  top: 8px;
+  right: 32px;
+  z-index: 5;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  color: inherit;
+  padding: 8px 24px;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  transition: color 0.3s ease;
+}
+
+.select:hover {
+  color: #fff;
+}
+
+.select option {
+  background-color: #272730;
+  color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.viewStyles {
+  position: absolute;
+  display: flex;
+  gap: 12px;
+  top: 7px;
+  left: 32px;
+}
+
+.button {
+  background-color: transparent;
+  display: flex;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  svg {
+    color: rgba(255, 255, 255, 0.5);
+    width: 20px;
+    height: 20px;
+    transition: color 0.3s ease;
+  }
+}
+
+.button:hover svg {
+  color: #fff;
+}
+
+.noContacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-weight: 500;
+  font-size: clamp(16px, 4vw, 48px);
+  line-height: 1.2;
+}

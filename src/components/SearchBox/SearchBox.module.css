@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #a8ff53;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid #3b413d;
+  border-radius: 4px;
+  padding: 17px 22px;
+  background: #272730;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  margin-bottom: 6px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.input:hover {
+  border-color: #659932;
+  box-shadow: 0 0 8px rgb(168, 255, 83, 0.5);
+}
+
+.input:focus {
+  outline: none;
+  border-color: #659932;
+}
