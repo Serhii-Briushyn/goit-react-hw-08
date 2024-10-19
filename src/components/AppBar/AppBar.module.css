@@ -6,10 +6,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 32px;
+  padding: 18px;
   margin-bottom: 32px;
   flex: 0 0 auto;
   position: sticky;
   top: 0;
   z-index: 10;
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 18px 32px;
+  }
 }

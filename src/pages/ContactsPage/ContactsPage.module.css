@@ -10,7 +10,7 @@
   border: 1px solid #3b413d;
   border-radius: 8px;
   background: #272730;
-  padding: 50px 32px 32px 32px;
+  padding: 50px 18px 18px 18px;
   width: 100%;
   position: relative;
 }
@@ -21,7 +21,7 @@
   border: 1px solid #3b413d;
   border-radius: 8px;
   background: #272730;
-  padding: 32px;
+  padding: 18px;
   width: 100%;
 }
 
@@ -48,7 +48,16 @@
   border-radius: 8px;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
+  .formWrapper {
+    padding: 50px 32px;
+  }
+  .contactsWrapper {
+    padding: 50px 32px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -57,13 +66,11 @@
     overflow-y: hidden;
   }
   .formWrapper {
-    padding: 50px 32px;
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
   }
   .contactsWrapper {
-    padding: 50px 32px;
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;

@@ -9,7 +9,7 @@
   position: relative;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   #root {
     height: 100vh;
     position: initial;

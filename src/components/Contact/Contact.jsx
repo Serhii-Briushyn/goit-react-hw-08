@@ -5,16 +5,21 @@ import css from "./Contact.module.css";
 import Modal from "../Modal/Modal";
 import { useState } from "react";
 import toast from "react-hot-toast";
-import { setCurrentContact } from "../../redux/contacts/slice";
+import {
+  clearCurrentContact,
+  setCurrentContact,
+} from "../../redux/contacts/slice";
 import { FaEdit } from "react-icons/fa";
 import { GoKebabHorizontal } from "react-icons/go";
 import { FiPhone } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight } from "../../motion/motion";
+import EditContact from "../EditContact/EditContact";
 
 function Contact({ contact, index, isOpen, toggleMenu }) {
   const dispatch = useDispatch();
   const [showModal, setShowModal] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
 
   const handleDelete = () => {
     setShowModal(true);
@@ -37,7 +42,13 @@ function Contact({ contact, index, isOpen, toggleMenu }) {
 
   const handleEdit = () => {
     dispatch(setCurrentContact(contact));
+    setIsEditing(true);
     toggleMenu();
+  };
+
+  const closeEditModal = () => {
+    setIsEditing(false);
+    dispatch(clearCurrentContact());
   };
 
   return (
@@ -86,6 +97,10 @@ function Contact({ contact, index, isOpen, toggleMenu }) {
             onConfirm={confirmDelete}
             onCancel={cancelDelete}
           />
+        )}
+
+        {isEditing && (
+          <EditContact contact={contact} onClose={closeEditModal} />
         )}
       </motion.li>
     </AnimatePresence>

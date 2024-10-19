@@ -4,13 +4,7 @@ import ContactList from "../../components/ContactList/ContactList";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchContacts } from "../../redux/contacts/operations";
-import {
-  selectCurrentContact,
-  selectError,
-  selectIsLoading,
-} from "../../redux/contacts/selectors";
-import EditContact from "../../components/EditContact/EditContact";
-import { clearCurrentContact } from "../../redux/contacts/slice";
+import { selectError, selectIsLoading } from "../../redux/contacts/selectors";
 import css from "./ContactsPage.module.css";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";
@@ -20,7 +14,6 @@ export default function ContactPage() {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
-  const currentContact = useSelector(selectCurrentContact);
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -30,10 +23,6 @@ export default function ContactPage() {
     }
   }, [dispatch, error]);
 
-  const handleCloseEditForm = () => {
-    dispatch(clearCurrentContact());
-  };
-
   return (
     <motion.div
       className={css.wrapper}
@@ -42,11 +31,7 @@ export default function ContactPage() {
       transition={{ delay: 0.2, duration: 1 }}
     >
       <div className={css.formWrapper}>
-        {!currentContact ? (
-          <ContactForm />
-        ) : (
-          <EditContact contact={currentContact} onClose={handleCloseEditForm} />
-        )}
+        <ContactForm />
         <SearchBox />
       </div>
 
