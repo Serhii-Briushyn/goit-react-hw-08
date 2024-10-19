@@ -19,9 +19,6 @@ export const selectSortedContacts = createSelector(
     );
 
     return filteredContacts.sort((a, b) => {
-      if (a.isFavorite && !b.isFavorite) return -1;
-      if (!a.isFavorite && b.isFavorite) return 1;
-
       if (sortBy === "name") {
         return a.name.localeCompare(b.name);
       } else if (sortBy === "date") {

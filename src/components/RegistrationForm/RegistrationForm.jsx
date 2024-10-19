@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { register } from "../../redux/auth/operations";
 import { motion } from "framer-motion";
-import css from "./RegisterForm.module.css";
+import css from "./RegistrationForm.module.css";
 import toast from "react-hot-toast";
 import { selectIsLoadingAuth } from "../../redux/auth/selectors";
 import Loader from "../Loader/Loader";
@@ -24,7 +24,7 @@ const validationSchema = Yup.object({
     .required("Password is required"),
 });
 
-export const RegisterForm = () => {
+function RegistrationForm() {
   const dispatch = useDispatch();
   const isLoadingAuth = useSelector(selectIsLoadingAuth);
 
@@ -102,4 +102,6 @@ export const RegisterForm = () => {
       </Formik>
     </motion.div>
   );
-};
+}
+
+export default RegistrationForm;

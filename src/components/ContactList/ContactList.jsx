@@ -10,12 +10,14 @@ import { setSortBy } from "../../redux/contacts/slice";
 import { FiGrid } from "react-icons/fi";
 import { FaListUl } from "react-icons/fa6";
 import { TypeAnimation } from "react-type-animation";
+import { selectFilter } from "../../redux/filters/selectors";
 
 function ContactList() {
   const dispatch = useDispatch();
   const [openContactId, setOpenContactId] = useState(null);
   const sortBy = useSelector(selectSortBy);
   const contacts = useSelector(selectSortedContacts);
+  const filter = useSelector(selectFilter);
   const [viewMode, setViewMode] = useState("grid");
   const [textColor, setTextColor] = useState("#00FFFF");
 
@@ -54,31 +56,35 @@ function ContactList() {
       </select>
 
       {contacts.length === 0 ? (
-        <div
-          className={css.noContacts}
-          style={{
-            color: textColor,
-          }}
-        >
-          <TypeAnimation
-            sequence={[
-              "Add",
-              800,
-              () => setTextColor("#ffa500"),
-              "Add your",
-              800,
-              () => setTextColor("#0000ff"),
-              "Add your first",
-              800,
-              () => setTextColor("#ff00ff"),
-              "Add your first contact",
-              1000,
-              () => setTextColor("#7fff00"),
-              "",
-            ]}
-            repeat={Infinity}
-          />
-        </div>
+        filter ? (
+          <p className={css.noFound}>No contacts found 😔</p>
+        ) : (
+          <div
+            className={css.noContacts}
+            style={{
+              color: textColor,
+            }}
+          >
+            <TypeAnimation
+              sequence={[
+                "Add",
+                800,
+                () => setTextColor("#ffa500"),
+                "Add your",
+                800,
+                () => setTextColor("#0000ff"),
+                "Add your first",
+                800,
+                () => setTextColor("#ff00ff"),
+                "Add your first contact",
+                1000,
+                () => setTextColor("#7fff00"),
+                "",
+              ]}
+              repeat={Infinity}
+            />
+          </div>
+        )
       ) : (
         <ul className={viewMode === "grid" ? css.grid : css.list}>
           {contacts.map((contact, index) => (
