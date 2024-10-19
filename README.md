@@ -1,8 +1,49 @@
-# React + Vite
+# PhoneBook
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Main Page](./public/screenshot1.png)
 
-Currently, two official plugins are available:
+## 📖 Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**PhoneBook** is the final project of the **React** module. It allows users to save and manage their contacts after registration. The project features a fully responsive design, ensuring usability on both mobile devices and desktops.
+
+## 🚀 Features
+
+- User registration and authentication.
+- Add, delete, and edit contacts.
+- Sort contacts by name or date.
+- Search contacts by name or number.
+- Fully responsive interface.
+
+## 📸 Screenshots
+
+### Contact List
+
+![Contact List](./public/screenshot2.png)
+
+## 🛠 Technologies
+
+- **React** - A framework for building user interfaces.
+- **Redux** - State management.
+- **Axios** - HTTP client for API requests.
+- **Formik** and **Yup** - Form management and validation.
+- **Framer Motion** - Animation library.
+- **Vite** - Fast build tool.
+- **MUI (Material UI)** - Component library.
+- **react-router-dom** - Routing and navigation.
+- **redux-persist** - Persistence of state in local storage.
+- And many other libraries, such as `react-hot-toast`, `react-spinners`, `email-validator`, etc.
+
+## 📦 Installation
+
+Clone the repository, install dependencies, and run the project:
+
+```bash
+npm install
+npm run dev
+```
+
+Open http://localhost:5173 in your browser. For production build:
+
+```
+npm run build
+```
