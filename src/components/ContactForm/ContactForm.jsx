@@ -6,6 +6,8 @@ import * as Yup from "yup";
 import { unwrapResult } from "@reduxjs/toolkit";
 import toast from "react-hot-toast";
 import { selectContacts } from "../../redux/contacts/selectors";
+import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const ContactSchema = Yup.object().shape({
   name: Yup.string()
@@ -45,32 +47,51 @@ function ContactForm() {
   };
 
   return (
-    <Formik
-      initialValues={initialValues}
-      onSubmit={handleSubmit}
-      validationSchema={ContactSchema}
-    >
-      <Form className={css.form}>
-        <div className={css.wrapper}>
-          <label className={css.label}>
-            Name
-            <Field className={css.input} type="text" name="name" />
-          </label>
-          <ErrorMessage className={css.error} name="name" component="span" />
-        </div>
-        <div className={css.wrapper}>
-          <label className={css.label}>
-            Number
-            <Field className={css.input} type="text" name="number" />
-          </label>
-          <ErrorMessage className={css.error} name="number" component="span" />
-        </div>
-
-        <button className={css.button} type="submit">
-          Add contact
-        </button>
-      </Form>
-    </Formik>
+    <Accordion className={css.accordion}>
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon style={{ color: "#fff" }} />}
+        aria-controls="panel-content"
+        id="panel-header"
+        className={css.accordionSummary}
+      >
+        <h4 className={css.accordionText}>Add contact</h4>
+      </AccordionSummary>
+      <AccordionDetails className={css.accordionDetails}>
+        <Formik
+          initialValues={initialValues}
+          onSubmit={handleSubmit}
+          validationSchema={ContactSchema}
+        >
+          <Form className={css.form}>
+            <div className={css.wrapper}>
+              <label className={css.label}>
+                Name
+                <Field className={css.input} type="text" name="name" />
+              </label>
+              <ErrorMessage
+                className={css.error}
+                name="name"
+                component="span"
+              />
+            </div>
+            <div className={css.wrapper}>
+              <label className={css.label}>
+                Number
+                <Field className={css.input} type="text" name="number" />
+              </label>
+              <ErrorMessage
+                className={css.error}
+                name="number"
+                component="span"
+              />
+            </div>
+            <button className={css.button} type="submit">
+              Add contact
+            </button>
+          </Form>
+        </Formik>
+      </AccordionDetails>
+    </Accordion>
   );
 }
 

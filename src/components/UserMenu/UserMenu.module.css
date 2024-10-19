@@ -1,7 +1,6 @@
 .wrapper {
   display: flex;
   align-items: center;
-  gap: 36px;
 }
 
 .username {
@@ -35,8 +34,20 @@
   box-shadow: 0 4px 12px rgba(168, 255, 83, 0.4);
 }
 
-@media (min-width: 425px) {
+@media screen and (min-width: 425px) {
+  .wrapper {
+    gap: 12px;
+  }
   .username {
     display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    gap: 36px;
   }
 }

@@ -5,7 +5,7 @@
   flex-direction: column;
   gap: 24px;
   width: 100%;
-  padding-bottom: 64px;
+  margin-bottom: 12px;
 }
 
 .wrapper {
@@ -37,7 +37,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  color: #fff;
+  color: #fff !important;
   margin-bottom: 6px;
   box-sizing: border-box;
   transition: all 0.3s ease;
@@ -51,6 +51,16 @@
 .input:focus {
   outline: none;
   border-color: #659932;
+}
+
+input::spelling-error {
+  color: #fff;
+  text-decoration: underline wavy red;
+}
+
+input::grammar-error {
+  color: #fff;
+  text-decoration: underline wavy green;
 }
 
 .error {
@@ -84,4 +94,32 @@
 .button:active {
   transform: translateY(2px);
   box-shadow: 0 4px 12px rgba(168, 255, 83, 0.4);
+}
+
+.accordion {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 0 32px 0 !important;
+}
+
+.accordionSummary {
+  padding: 0 !important;
+  margin: 0 !important;
+  color: #fff !important;
+}
+
+.accordionText {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #a8ff53;
+}
+
+.accordionDetails {
+  width: 100% !important;
+  padding: 0 !important;
+  background-color: transparent !important;
+  color: #fff !important;
 }
