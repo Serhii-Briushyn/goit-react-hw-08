@@ -13,7 +13,7 @@
 .select {
   position: absolute;
   top: 8px;
-  right: 32px;
+  right: 18px;
   z-index: 5;
   appearance: none;
   -webkit-appearance: none;
@@ -81,6 +81,9 @@
     grid-auto-rows: auto;
     gap: 20px;
   }
+  .select {
+    right: 32px;
+  }
   .button {
     background-color: transparent;
     display: flex;
@@ -95,7 +98,6 @@
       transition: color 0.3s ease;
     }
   }
-
   .button:hover svg {
     color: #fff;
   }

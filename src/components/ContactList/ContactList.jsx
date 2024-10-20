@@ -10,14 +10,14 @@ import { setSortBy } from "../../redux/contacts/slice";
 import { FiGrid } from "react-icons/fi";
 import { FaListUl } from "react-icons/fa6";
 import { TypeAnimation } from "react-type-animation";
-import { selectFilter } from "../../redux/filters/selectors";
+import { selectNameFilter } from "../../redux/filters/selectors";
 
 function ContactList() {
   const dispatch = useDispatch();
   const [openContactId, setOpenContactId] = useState(null);
   const sortBy = useSelector(selectSortBy);
   const contacts = useSelector(selectSortedContacts);
-  const filter = useSelector(selectFilter);
+  const filter = useSelector(selectNameFilter);
   const [viewMode, setViewMode] = useState("grid");
   const [textColor, setTextColor] = useState("#00FFFF");
 
@@ -51,8 +51,8 @@ function ContactList() {
       </div>
 
       <select value={sortBy} className={css.select} onChange={handleSortChange}>
-        <option value="name">Sort by Name</option>
-        <option value="date">Sort by Date</option>
+        <option value="name">By Name</option>
+        <option value="date">By Date</option>
       </select>
 
       {contacts.length === 0 ? (

@@ -1,5 +1,5 @@
 import { createSelector } from "@reduxjs/toolkit";
-import { selectFilter } from "../filters/selectors";
+import { selectNameFilter } from "../filters/selectors";
 
 export const selectContacts = (state) => state.contacts.items;
 export const selectCurrentContact = (state) => state.contacts.currentContact;
@@ -8,7 +8,7 @@ export const selectError = (state) => state.contacts.isError;
 export const selectSortBy = (state) => state.contacts.sortBy;
 
 export const selectSortedContacts = createSelector(
-  [selectContacts, selectFilter, selectSortBy],
+  [selectContacts, selectNameFilter, selectSortBy],
   (contacts, filter, sortBy) => {
     const normalizedFilter = filter.toLowerCase();
 
