@@ -54,7 +54,7 @@ function ContactForm() {
         id="panel-header"
         className={css.accordionSummary}
       >
-        <h4 className={css.accordionText}>Add contact</h4>
+        <p className={css.accordionText}>Add contact</p>
       </AccordionSummary>
       <AccordionDetails className={css.accordionDetails}>
         <Formik

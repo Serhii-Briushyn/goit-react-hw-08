@@ -76,7 +76,7 @@ input:-webkit-autofill:active {
   input,
   button,
   label {
-    font-size: 16px !important;
+    font-size: 14px !important;
   }
 }
 
@@ -86,7 +86,7 @@ input:-webkit-autofill:active {
   input,
   button,
   label {
-    font-size: 18px !important;
+    font-size: 16px !important;
   }
 }
 
@@ -96,7 +96,7 @@ input:-webkit-autofill:active {
   input,
   button,
   label {
-    font-size: 20px !important;
+    font-size: 18px !important;
   }
 }
 
@@ -106,26 +106,6 @@ input:-webkit-autofill:active {
   input,
   button,
   label {
-    font-size: 22px !important;
-  }
-}
-
-@media screen and (min-width: 2560px) {
-  a,
-  p,
-  input,
-  button,
-  label {
-    font-size: 24px !important;
-  }
-}
-
-@media screen and (min-width: 3840px) {
-  a,
-  p,
-  input,
-  button,
-  label {
-    font-size: 28px !important;
+    font-size: 20px !important;
   }
 }

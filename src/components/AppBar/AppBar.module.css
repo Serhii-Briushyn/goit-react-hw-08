@@ -19,15 +19,3 @@
     padding: 18px 32px;
   }
 }
-
-@media screen and (min-width: 2560px) {
-  .header {
-    padding: 26px 56px;
-  }
-}
-
-@media screen and (min-width: 3840px) {
-  .header {
-    padding: 42px 86px;
-  }
-}

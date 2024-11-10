@@ -127,22 +127,3 @@
     font-size: 56px;
   }
 }
-
-@media screen and (min-width: 2560px) {
-  .wrapper {
-    padding: 130px 36px;
-  }
-  .title {
-    font-size: 64px;
-  }
-}
-
-@media screen and (min-width: 3840px) {
-  .wrapper {
-    padding: 200px 36px;
-  }
-  .title {
-    font-size: 72px;
-    max-width: 720px;
-  }
-}

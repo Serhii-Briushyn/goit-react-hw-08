@@ -67,7 +67,7 @@ function EditContact({ contact, onClose }) {
                     <Field className={css.input} type="text" name="name" />
                   </label>
                   <ErrorMessage
-                    className={css.message}
+                    className={css.error}
                     name="name"
                     component="span"
                   />
@@ -79,7 +79,7 @@ function EditContact({ contact, onClose }) {
                     <Field className={css.input} type="text" name="number" />
                   </label>
                   <ErrorMessage
-                    className={css.message}
+                    className={css.error}
                     name="number"
                     component="span"
                   />

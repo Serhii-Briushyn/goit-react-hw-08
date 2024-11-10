@@ -132,30 +132,3 @@
     font-size: 20px;
   }
 }
-
-@media screen and (min-width: 2560px) {
-  .wrapper {
-    padding: 130px 36px;
-  }
-  .form {
-    max-width: 35%;
-  }
-  .button {
-    padding: 20px 26px;
-  }
-  .error {
-    font-size: 22px;
-  }
-}
-
-@media screen and (min-width: 3840px) {
-  .wrapper {
-    padding: 200px 36px;
-  }
-  .button {
-    padding: 24px 30px;
-  }
-  .error {
-    font-size: 24px;
-  }
-}

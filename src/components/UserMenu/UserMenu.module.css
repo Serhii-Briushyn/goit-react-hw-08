@@ -56,15 +56,3 @@
     padding: 14px 22px;
   }
 }
-
-@media screen and (min-width: 2560px) {
-  .button {
-    padding: 18px 28px;
-  }
-}
-
-@media screen and (min-width: 3840px) {
-  .button {
-    padding: 24px 34px;
-  }
-}
