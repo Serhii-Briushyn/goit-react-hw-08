@@ -57,7 +57,6 @@
 
 .text {
   font-weight: 400;
-  font-size: 14px;
   line-height: 1.5;
   color: #fff;
   display: flex;
@@ -110,7 +109,6 @@
   width: 100%;
   padding: 14px 60px 14px 24px;
   background-color: #272730;
-  font-size: 20px;
   z-index: 2;
   visibility: hidden;
   transform: translateX(-100%);
@@ -125,7 +123,6 @@
   width: 100%;
   padding: 14px 60px 14px 24px;
   background-color: #272730;
-  font-size: 20px;
   visibility: visible;
   transform: translateX(0);
   transition: transform 0.5s ease, visibility 0s;
@@ -150,19 +147,10 @@
   color: #f778ba;
 }
 
-@media screen and (min-width: 375px) {
-  .text {
-    font-size: 16px;
-  }
-}
-
 @media screen and (min-width: 425px) {
   .item {
     padding: 14px 60px 14px 24px;
     height: 100px;
-  }
-  .text {
-    font-size: 18px;
   }
   .button {
     padding: 20px;

@@ -13,7 +13,7 @@ export const AuthNav = () => {
         Register
       </NavLink>
       <NavLink className={buildLinkClass} to="/login">
-        Log In
+        Login
       </NavLink>
     </div>
   );

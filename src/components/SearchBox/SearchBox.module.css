@@ -7,7 +7,6 @@
 
 .label {
   font-weight: 500;
-  font-size: 16px;
   line-height: 1.2;
   color: #a8ff53;
 }
@@ -21,7 +20,6 @@
   padding: 17px 22px;
   background: #272730;
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.5;
   color: #fff;
   margin-bottom: 6px;

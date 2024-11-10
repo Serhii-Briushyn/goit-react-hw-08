@@ -59,3 +59,73 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 1000px #272730 inset;
   -webkit-text-fill-color: #fff;
 }
+
+@media screen and (max-width: 767px) {
+  a,
+  p,
+  input,
+  button,
+  label {
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  a,
+  p,
+  input,
+  button,
+  label {
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  a,
+  p,
+  input,
+  button,
+  label {
+    font-size: 18px !important;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  a,
+  p,
+  input,
+  button,
+  label {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  a,
+  p,
+  input,
+  button,
+  label {
+    font-size: 22px !important;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  a,
+  p,
+  input,
+  button,
+  label {
+    font-size: 24px !important;
+  }
+}
+
+@media screen and (min-width: 3840px) {
+  a,
+  p,
+  input,
+  button,
+  label {
+    font-size: 28px !important;
+  }
+}

@@ -16,7 +16,6 @@
   flex-direction: column;
   align-items: center;
   gap: 32px;
-  max-width: 400px;
   width: 100%;
 }
 
@@ -25,7 +24,6 @@
   flex-direction: column;
   width: 100%;
   font-weight: 500;
-  font-size: 20px;
   line-height: 1.2;
   color: #a8ff53;
 }
@@ -39,10 +37,10 @@
   padding: 17px 22px;
   background: #272730;
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.5;
   color: #fff;
   margin-bottom: 6px;
+  margin-top: 6px;
   box-sizing: border-box;
   transition: all 0.3s ease;
 }
@@ -58,9 +56,9 @@
 }
 
 .error {
-  font-size: 14px;
-  color: #f778ba;
+  color: #ff0000;
   margin-left: auto;
+  font-size: 12px;
 }
 
 .button {
@@ -68,11 +66,10 @@
   align-items: center;
   justify-content: flex-start;
   border-radius: 4px;
-  padding: 16px 18px;
+  padding: 16px 20px;
   background: #a8ff53;
   border: none;
   font-weight: 500;
-  font-size: 14px;
   line-height: 1;
   letter-spacing: 0.02em;
   color: #1f1f24;
@@ -88,4 +85,77 @@
 .button:active {
   transform: translateY(2px);
   box-shadow: 0 4px 12px rgba(168, 255, 83, 0.4);
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    width: 70%;
+    height: max-content;
+    padding: 50px 36px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .form {
+    max-width: 400px;
+  }
+  .error {
+    font-size: 14px;
+  }
+  .button {
+    padding: 18px 22px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .form {
+    max-width: 45%;
+  }
+  .error {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .wrapper {
+    padding: 60px 36px;
+  }
+  .error {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .wrapper {
+    padding: 80px 36px;
+  }
+  .error {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .wrapper {
+    padding: 130px 36px;
+  }
+  .form {
+    max-width: 35%;
+  }
+  .button {
+    padding: 20px 26px;
+  }
+  .error {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 3840px) {
+  .wrapper {
+    padding: 200px 36px;
+  }
+  .button {
+    padding: 24px 30px;
+  }
+  .error {
+    font-size: 24px;
+  }
 }

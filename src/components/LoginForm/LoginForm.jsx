@@ -82,7 +82,7 @@ export const LoginForm = () => {
               type="submit"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Logging in..." : "Log In"}
+              {isSubmitting ? "Logging in..." : "Login"}
             </button>
           </Form>
         )}
