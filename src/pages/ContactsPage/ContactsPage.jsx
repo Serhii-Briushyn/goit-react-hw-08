@@ -9,6 +9,7 @@ import css from "./ContactsPage.module.css";
 import toast from "react-hot-toast";
 import { motion } from "framer-motion";
 import Loader from "../../components/Loader/Loader";
+import DocumentTitle from "../../components/DocumentTitle";
 
 export default function ContactPage() {
   const dispatch = useDispatch();
@@ -24,28 +25,31 @@ export default function ContactPage() {
   }, [dispatch, error]);
 
   return (
-    <motion.div
-      className={css.wrapper}
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.2, duration: 1 }}
-    >
-      <div className={css.formWrapper}>
-        <ContactForm />
-        <SearchBox />
-      </div>
-
-      {isLoading && !error && (
-        <div className="loader">
-          <Loader />
+    <>
+      <DocumentTitle>Contacts</DocumentTitle>
+      <motion.div
+        className={css.wrapper}
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 1 }}
+      >
+        <div className={css.formWrapper}>
+          <ContactForm />
+          <SearchBox />
         </div>
-      )}
 
-      {!isLoading && !error && (
-        <div className={css.contactsWrapper}>
-          <ContactList />
-        </div>
-      )}
-    </motion.div>
+        {isLoading && !error && (
+          <div className="loader">
+            <Loader />
+          </div>
+        )}
+
+        {!isLoading && !error && (
+          <div className={css.contactsWrapper}>
+            <ContactList />
+          </div>
+        )}
+      </motion.div>
+    </>
   );
 }
