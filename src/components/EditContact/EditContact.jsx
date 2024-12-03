@@ -33,7 +33,7 @@ function EditContact({ contact, onClose }) {
 
   const handleSubmit = async (values, { resetForm }) => {
     try {
-      await dispatch(updateContact({ id: contact.id, updatedContact: values }));
+      dispatch(updateContact({ id: contact.id, updatedContact: values }));
       toast.success("Contact updated successfully!");
       resetForm();
       onClose();
