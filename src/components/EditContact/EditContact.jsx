@@ -6,6 +6,7 @@ import * as Yup from "yup";
 import toast from "react-hot-toast";
 import css from "./EditContact.module.css";
 import { motion, AnimatePresence } from "framer-motion";
+import { useCallback } from "react";
 
 const ContactSchema = Yup.object().shape({
   name: Yup.string()
@@ -20,6 +21,15 @@ const ContactSchema = Yup.object().shape({
 
 function EditContact({ contact, onClose }) {
   const dispatch = useDispatch();
+
+  const handleBackdropClick = useCallback(
+    (e) => {
+      if (e.target === e.currentTarget) {
+        onClose();
+      }
+    },
+    [onClose]
+  );
 
   const handleSubmit = async (values, { resetForm }) => {
     try {
@@ -45,6 +55,7 @@ function EditContact({ contact, onClose }) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
+        onClick={handleBackdropClick}
       >
         <motion.div
           className={css.modal}
